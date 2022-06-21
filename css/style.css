@@ -5,8 +5,9 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+html,body{
     background-color: rgb(180, 210, 219);
+    overflow-x: hidden;
 }
 
 .navbar1{
@@ -220,6 +221,11 @@ a{
     margin-top: 6rem;
 }
 
+.ri-menu-5-line, .ri-close-fill{
+    font-size: 1.5rem;
+    display: none;
+}
+
 @media screen and (max-width:992px) {
     .leftSection2{
         flex-direction: column;
@@ -227,6 +233,28 @@ a{
 }
 
 @media screen and (max-width:768px) {
+    .ri-menu-5-line, .ri-close-fill{
+        display: block;
+    }
+
+    .nav1items{
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        right: -300px;
+        padding: 1rem;
+        background-color: rgb(3, 3, 92);;
+        width: 40%;
+        text-align: center;
+        height: 100vh;
+        transition: .5s;
+        color: #fff;
+    }
+
+    .nav1items a{
+        color: #fff;
+    }
+
     #mainArea{
         flex-direction: column;
     }
